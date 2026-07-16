@@ -1,4 +1,4 @@
-\# Satellite Attitude Control using Feedback Linearization
+# Satellite Attitude Control using Feedback Linearization
 
 
 
@@ -6,7 +6,7 @@ This repository contains a MATLAB implementation and supporting documentation fo
 
 
 
-\## Project Overview
+## Project Overview
 
 The objective of this project is to design a robust attitude controller for a rigid-body satellite using feedback linearization. The method cancels the nonlinear rotational dynamics and introduces a linear closed-loop error system with second-order behavior.
 
@@ -14,21 +14,21 @@ The objective of this project is to design a robust attitude controller for a ri
 
 The controller is developed for:
 
-\- Nonlinear rigid-body rotational dynamics
+- Nonlinear rigid-body rotational dynamics
 
-\- Quaternion-based attitude representation
+- Quaternion-based attitude representation
 
-\- Disturbance rejection
+- Disturbance rejection
 
-\- Actuator saturation effects
-
-
-
-\## Mathematical Model
+- Actuator saturation effects
 
 
 
-\### 1. Rigid-Body Dynamics
+## Mathematical Model
+
+
+
+### 1. Rigid-Body Dynamics
 
 The satellite rotational motion is modeled by Euler’s equation:
 
@@ -40,17 +40,17 @@ $$J \\dot{\\omega} = -\\omega^\\times J \\omega + u + \\tau\_{dist}$$
 
 where:
 
-\- $J$ is the inertia matrix
+- $J$ is the inertia matrix
 
-\- $\\omega$ is the body angular velocity vector
+- $\\omega$ is the body angular velocity vector
 
-\- u is the control torque
+- u is the control torque
 
-\- $\\tau\_{dist}$ is the disturbance torque
+- $\\tau\_{dist}$ is the disturbance torque
 
 
 
-\### 2. Quaternion Kinematics
+### 2. Quaternion Kinematics
 
 The attitude is represented using a unit quaternion:
 
@@ -80,7 +80,7 @@ $$q\_{ev} \\to 0, \\qquad \\omega \\to 0$$
 
 
 
-\## Feedback Linearization Design
+## Feedback Linearization Design
 
 
 
@@ -102,11 +102,11 @@ $$\\ddot{y} = \\alpha + \\beta u + d$$
 
 where:
 
-\- $\\alpha$ contains the nonlinear terms
+- $\\alpha$ contains the nonlinear terms
 
-\- $\\beta$ is the input gain matrix
+- $\\beta$ is the input gain matrix
 
-\- $d$ represents the disturbance term
+- $d$ represents the disturbance term
 
 
 
@@ -138,79 +138,78 @@ $$u = \\beta^{-1}(v - \\alpha - d)$$
 
 
 
-\## Simulation Features
+## Simulation Features
 
 The MATLAB script includes:
 
-\- quaternion normalization
+- quaternion normalization
 
-\- rigid-body attitude propagation
+- rigid-body attitude propagation
 
-\- disturbance torque modeling
+- disturbance torque modeling
 
-\- control torque saturation
+- control torque saturation
 
-\- time-domain simulation of attitude stabilization
+- time-domain simulation of attitude stabilization
 
-\- plotting of attitude error, angular velocity, control torque, and disturbance torque
+- plotting of attitude error, angular velocity, control torque, and disturbance torque
 
 
 
-\## Files Included
+## Files Included
 
-\- `mfile\_FBLin.m`  
+- `mfile\_FBLin.m`  
 
 &#x20; Main MATLAB simulation script for feedback linearization control design.
 
-\- `README.md`  
+- `README.md`  
 
 &#x20; Project README structure and formatting example.
 
 
-
-\## Simulation Parameters
+## Simulation Parameters
 
 Typical simulation settings used in the code include:
 
-\- Simulation time: 200 s
+- Simulation time: 200 s
 
-\- Integration step: 0.1 s
+- Integration step: 0.1 s
 
-\- Torque saturation: \\pm 5 N.m
+- Torque saturation: \\pm 5 N.m
 
-\- Disturbance torques: constant plus sinusoidal components
+- Disturbance torques: constant plus sinusoidal components
 
 
 
-\## Figures
+## Figures
 
 If you include the generated plots in the repository, use the following format:
 
 
 
-\## Simulation Results
+## Simulation Results
 
 
 
-\### Feedback linearization results with saturation
+### Feedback linearization results with saturation
 
 !\[Feedback linearization results with saturation](Figures/FBLin\_results\_example2.png)
 
 
 
-\### Feedback linearization results with additional example
+### Feedback linearization results with additional example
 
 !\[Feedback linearization results with additional example](Figures/FBLin\_results\_example3.png)
 
 
 
-\### Feedback linearization results without saturation
+### Feedback linearization results without saturation
 
 !\[Feedback linearization results without saturation](Figures/FBLin\_results\_no\_saturation.png)
 
 
 
-\## Usage
+## Usage
 
 1\. Open `mfile\_FBLin.m` in MATLAB.
 
@@ -226,27 +225,27 @@ If you include the generated plots in the repository, use the following format:
 
 
 
-\## Notes
+## Notes
 
-\- The attitude is represented using quaternions to avoid singularities.
+- The attitude is represented using quaternions to avoid singularities.
 
-\- The controller uses feedback linearization to cancel nonlinear rotational coupling.
+- The controller uses feedback linearization to cancel nonlinear rotational coupling.
 
-\- Torque saturation may affect tracking performance but improves practical implementability.
+- Torque saturation may affect tracking performance but improves practical implementability.
 
-\- Disturbance rejection is evaluated under constant and sinusoidal perturbations.
-
-
-
-\## Requirements
-
-\- MATLAB
-
-\- Basic familiarity with quaternion kinematics and nonlinear control
+- Disturbance rejection is evaluated under constant and sinusoidal perturbations.
 
 
 
-\---
+## Requirements
+
+- MATLAB
+
+- Basic familiarity with quaternion kinematics and nonlinear control
+
+
+
+---
 
 Prepared for a satellite attitude control project using nonlinear feedback linearization.
 
