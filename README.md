@@ -193,19 +193,19 @@ If you include the generated plots in the repository, use the following format:
 
 ### Feedback linearization results with saturation
 
-!\[Feedback linearization results with saturation](Figures/FBLin\_results\_example2.png)
+![Feedback linearization results with saturation](Figures/FBLin\_results\_example2.png)
 
 
 
 ### Feedback linearization results with additional example
 
-!\[Feedback linearization results with additional example](Figures/FBLin\_results\_example3.png)
+![Feedback linearization results with additional example](Figures/FBLin\_results\_example3.png)
 
 
 
 ### Feedback linearization results without saturation
 
-!\[Feedback linearization results without saturation](Figures/FBLin\_results\_no\_saturation.png)
+![Feedback linearization results without saturation](Figures/FBLin\_results\_no\_saturation.png)
 
 
 
